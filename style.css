@@ -1,0 +1,141 @@
+/* reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+/* variables */
+:root {
+  --hue: 347;
+  /* HSL color mode */
+  --base-color:hsl(var(--hue) 86% 58%); /* não muda a cor */
+  --base-color-second:hsl(var(--hue)65% 88%);
+  --base-color-alt:hsl(var(--hue)57% 53%);
+  --title-color:hsl(var(--hue)41% 10%);
+  --text-color:hsl(0 0% 46%);
+  --test-color-light:hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+/* base */
+body{
+  font:400 1rem "DM Sans", sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+h1{
+  font:700 1.875rem "Poppins", sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+.button{
+  background-color: #FECEA8;
+  color: #171717;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  transition: background 0.3s ;
+}
+
+.button:hover {
+  color: #F03861;
+}
+
+.divider-1{
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+  
+}
+
+/* layout  */
+.container{
+  width: 90%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid{
+  display: grid;
+  gap: 2rem;
+}
+.section {
+  padding: 5rem 0;
+}
+#header {
+  border-bottom: 1px solid #FF847C;
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+nav{ 
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font:700 1.31rem "Poppins", sans-serif; 
+  color: var(--base-color);
+}
+
+/* Home */
+#home{
+  overflow: hidden;
+}
+#home .container{
+  margin: 0;
+}
+#home .imag{
+  position: relative;
+}
+
+#home .imag::before{
+  content:'';
+  height: 100%;
+  width: 100%;
+  background: #FF847C ;
+  position: absolute;
+  top: -10.8%;
+  left: 10.8%;
+  z-index: 0;
+}
+
+#home .imag img{
+ position: relative;
+ right: 2.93rem;
+}
+#home .imag img,
+#home .imag::before{
+  border-radius: 0.25rem;
+}
+
+#home .text{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text h1{
+  margin-bottom: 1rem;
+}
+
+#home .text p{
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
